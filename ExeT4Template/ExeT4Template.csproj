@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.CodeDom" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="mscorlib">
       <HintPath>mscorlib</HintPath>
     </Reference>
@@ -22,17 +26,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="HelloWorldTemplate.cs">
+    <Compile Update="Templates\HelloWorldTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>HelloWorldTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\HtmlTextTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HtmlTextTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="HelloWorldTemplate.tt">
+    <None Update="Templates\HelloWorldTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>HelloWorldTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\HtmlTextTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>HtmlTextTemplate.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExeT4Template.Templates;
+using System;
 
 namespace ExeT4Template
 {
@@ -8,12 +9,21 @@ namespace ExeT4Template
         {
             Console.WriteLine("Hello World!");
 
-            HelloWorldTemplate page = new HelloWorldTemplate();
-            String pageContent = page.TransformText(); 
+            HelloWorldTemplate helloWorld = new HelloWorldTemplate();
+            string content = helloWorld.TransformText();
+            Console.Write(content);
 
-            System.IO.File.WriteAllText("outputPage.html", pageContent);
-
+            WriteHtml();
             Console.ReadKey();
+        }
+
+        static void WriteHtml()
+        {
+            string pageContent = (new HtmlTextTemplate()).TransformText();
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"outputPage.html"))
+            {
+                file.Write(pageContent);
+            }
         }
     }
 }

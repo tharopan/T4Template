@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace ExeT4Template
+namespace ExeT4Template.Templates
 {
     using System.Linq;
     using System.Text;
@@ -18,7 +18,7 @@ namespace ExeT4Template
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\tharo\source\repos\ExeT4Template\ExeT4Template\HelloWorldTemplate.tt"
+    #line 1 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HelloWorldTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class HelloWorldTemplate : HelloWorldTemplateBase
     {
