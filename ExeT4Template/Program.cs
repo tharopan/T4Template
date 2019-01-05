@@ -25,5 +25,16 @@ namespace ExeT4Template
                 file.Write(pageContent);
             }
         }
+
+        static void GenerateClass()
+        {
+            ClassTemplate ct = new ClassTemplate();
+
+            var tt = ct.TransformText();
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"outputPage.html"))
+            {
+                file.Write(tt);
+            }
+        }
     }
 }

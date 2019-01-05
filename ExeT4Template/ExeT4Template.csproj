@@ -26,6 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\ClassTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ClassTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\HelloWorldTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -39,6 +44,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\ClassTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ClassTemplate.cs</LastGenOutput>
+    </None>
     <None Update="Templates\HelloWorldTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>HelloWorldTemplate.cs</LastGenOutput>

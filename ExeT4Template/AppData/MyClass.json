@@ -1,0 +1,18 @@
+[
+  {
+    "ÄccessModifier": "public",
+    "DataType": "int",
+    "PropName": "Id"
+  },
+  {
+    "ÄccessModifier": "public",
+    "DataType": "string",
+    "PropName": "FirstName"
+  },
+  {
+    "ÄccessModifier": "public",
+    "DataType": "string",
+    "PropName": "LastName"
+  }
+]
+

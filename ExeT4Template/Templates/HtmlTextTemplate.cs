@@ -28,14 +28,42 @@ namespace ExeT4Template.Templates
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("\r\n<html>\r\n<body>\r\n this is my body page ");
+            this.Write("\r\n");
             
-            #line 9 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HtmlTextTemplate.tt"
+            #line 7 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HtmlTextTemplate.tt"
+ var properties = new string [] {"P1", "P2", "P3"}; 
+            
+            #line default
+            #line hidden
+            this.Write("<html>\r\n\t<body>\r\n\t\tthis is my body page ");
+            
+            #line 10 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HtmlTextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.UtcNow));
             
             #line default
             #line hidden
-            this.Write("\r\n </body>\r\n </html>");
+            this.Write("\r\n\t\t");
+            
+            #line 11 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HtmlTextTemplate.tt"
+ foreach (string prop in properties)  { 
+            
+            #line default
+            #line hidden
+            this.Write("\t\t\t ");
+            
+            #line 12 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HtmlTextTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(prop));
+            
+            #line default
+            #line hidden
+            this.Write(" = 0;\r\n\t\t");
+            
+            #line 13 "C:\Users\tharo\source\repos\T4Template\ExeT4Template\Templates\HtmlTextTemplate.tt"
+ } 
+            
+            #line default
+            #line hidden
+            this.Write("\t</body>\r\n</html>");
             return this.GenerationEnvironment.ToString();
         }
     }
