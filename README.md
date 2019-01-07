@@ -1,6 +1,6 @@
-# Project Title
+# T4 Template
 
-One Paragraph of project description goes here
+Learn T4 template, generate text from the template which has already been defined. In addition lern how a dynamic class file can be generated.
 
 ## Getting Started
 
