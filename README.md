@@ -1,6 +1,6 @@
 # T4 Template
 
-Learn T4 template, generate text from the template which has already been defined. In addition lern how a dynamic class file can be generated.
+Learn T4 template, generate text from the template which has already been defined. In addition learn how a dynamic class file can be generated from the template.
 
 ## Getting Started
 
