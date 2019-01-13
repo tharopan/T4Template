@@ -1,16 +1,16 @@
 [
   {
-    "ÄccessModifier": "public",
+    "AccessModifier": "public",
     "DataType": "int",
     "PropName": "Id"
   },
   {
-    "ÄccessModifier": "public",
+    "AccessModifier": "public",
     "DataType": "string",
     "PropName": "FirstName"
   },
   {
-    "ÄccessModifier": "public",
+    "AccessModifier": "public",
     "DataType": "string",
     "PropName": "LastName"
   }

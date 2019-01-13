@@ -1,16 +1,31 @@
-﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+﻿<#@ template language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ output extension=".cs" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace= "Newtonsoft.Json" #>
 
-<# var myClassObject
+<#
+	List<MyClass> items;
+	using (StreamReader r = new StreamReader("..\\..\\..\\AppData\\Person.json"))
+    {
+        string json = r.ReadToEnd();
+        items = JsonConvert.DeserializeObject<List<MyClass>>(json);
+    }
+#>
+
 class MyGeneratedClass 
 {
 	<#
-	foreach (string propertyName in properties)  { #>
-	
-	  private int <#= propertyName #> = 0;
-	<# } #>
+	foreach(MyClass item in items)
+	{
+		if(item != null)
+		{
+	#>
+		<#= item.AccessModifier #> <#= item.DataType #> <#= item.PropName #> {get; set;}
+	<#
+		}
+	}
+	#>
 }

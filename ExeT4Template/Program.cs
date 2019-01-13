@@ -1,10 +1,15 @@
 ﻿using ExeT4Template.Templates;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace ExeT4Template
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -13,6 +18,8 @@ namespace ExeT4Template
             string content = helloWorld.TransformText();
             Console.Write(content);
 
+            GenerateClass();
+
             WriteHtml();
             Console.ReadKey();
         }
@@ -20,7 +27,7 @@ namespace ExeT4Template
         static void WriteHtml()
         {
             string pageContent = (new HtmlTextTemplate()).TransformText();
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"outputPage.html"))
+            using (StreamWriter file = new StreamWriter(@"outputPage.html"))
             {
                 file.Write(pageContent);
             }
@@ -31,7 +38,7 @@ namespace ExeT4Template
             ClassTemplate ct = new ClassTemplate();
 
             var tt = ct.TransformText();
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"outputPage.html"))
+            using (StreamWriter file = new StreamWriter(@"MyClass.cs"))
             {
                 file.Write(tt);
             }
